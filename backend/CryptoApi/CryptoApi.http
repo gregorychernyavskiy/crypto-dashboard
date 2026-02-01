@@ -1,0 +1,6 @@
+@CryptoApi_HostAddress = http://localhost:5160
+
+GET {{CryptoApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
