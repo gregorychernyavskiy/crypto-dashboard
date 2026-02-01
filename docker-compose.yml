@@ -1,0 +1,29 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: crypto-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  api:
+    build:
+      context: ./backend/CryptoApi
+      dockerfile: Dockerfile
+
+
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: crypto-web
+    restart: unless-stopped
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
+
+volumes:
+  mongo_data:
