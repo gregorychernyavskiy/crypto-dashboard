@@ -3,9 +3,6 @@
   "outputDirectory": "frontend/dist",
   "framework": null,
   "rewrites": [
-    { "source": "/api/prices/:coinId", "destination": "/api/prices/:coinId" },
-    { "source": "/api/prices", "destination": "/api/prices" },
-    { "source": "/api/chart/:coinId", "destination": "/api/chart/:coinId" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
 }

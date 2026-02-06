@@ -27,12 +27,13 @@ export function OverviewPage() {
 
     return (
         <div className="overview">
-            <div className="overview__header">
+            <div className="overview__header" style={{ textAlign: "center" }}>
                 <h1 className="overview__title">Markets</h1>
                 <p className="overview__subtitle">
                     Select a coin to view detailed price history and analytics
                 </p>
             </div>
+
 
             <div className="overview__grid">
                 {coins.map((c) => {
