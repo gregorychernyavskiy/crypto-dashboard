@@ -8,9 +8,9 @@ interface AppShellProps {
 
 export function AppShell({children}:AppShellProps) {
     return (
-        <div>
+        <div className="app-shell">
             <Header />
-            <main>{children}</main>
+            <main className="app-main">{children}</main>
             <Footer />
         </div>
     );

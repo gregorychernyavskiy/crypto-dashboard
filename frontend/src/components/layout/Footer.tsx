@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
-        <footer>
-            © {new Date().getFullYear()} AnchorFlow. All rights reserved.
+        <footer className="app-footer">
+            &copy; {new Date().getFullYear()} AnchorFlow. All rights reserved.
         </footer>
     );
 }
